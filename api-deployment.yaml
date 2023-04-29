@@ -1,0 +1,36 @@
+apiVersion: apps/v1 # Kubernetes API version
+kind: Deployment  # Kubernetes resource kind we are creating
+metadata:
+  name: crm-deployment # name of the deployment
+spec:
+  selector:
+    matchLabels:
+      app: crm-deployment
+  replicas: 1 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: crm-deployment
+    spec:
+      containers:
+      - name: crm-deployment
+        image: nizarnasraoui/crm-api:1.2 # Image that will be used to containers in the cluster
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080 # The port that the container is running on in the cluster
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: "1"
+          requests:
+            memory: 256Mi
+            cpu: "0.2"
+        env:
+          - name: MYSQL_HOST
+            value: mysql
+          - name: MYSQL_PORT
+            value: '3306'
+          - name: MYSQL_USER
+            value: 'root'
+          - name: MYSQL_PASSWORD
+            value: 'root'

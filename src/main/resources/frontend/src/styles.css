@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+/* RESET & BASIC STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+:root {
+  --white: #fff;
+  --darkblue: #1b4965;
+  --lightblue: #edf2f4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 50px 0 150px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+
