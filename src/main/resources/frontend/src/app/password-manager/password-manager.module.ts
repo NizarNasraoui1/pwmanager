@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { PasswordManagerRoutingModule } from './password-manager-routing.module';
 import { ViewPasswordsComponent } from './components/view-passwords/view-passwords.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -11,7 +14,11 @@ import { ViewPasswordsComponent } from './components/view-passwords/view-passwor
   ],
   imports: [
     CommonModule,
-    PasswordManagerRoutingModule
+    PasswordManagerRoutingModule,
+    MatTableModule,
+    MatCardModule,
+    MatButtonModule
+
   ]
 })
 export class PasswordManagerModule { }
