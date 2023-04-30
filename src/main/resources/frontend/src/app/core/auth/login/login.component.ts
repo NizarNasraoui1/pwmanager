@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit{
             this.isLoggedIn = true;
             this.roles = this.tokenStorage.getUser().roles;
             this.navigateToMainPage();
+            console.log("login successful")
           },
           err => {
             this.isLoginFailed = true;
@@ -48,6 +49,6 @@ export class LoginComponent implements OnInit{
       }
 
       navigateToMainPage(): void {
-        this.router.navigate([('/')]);
+        this.router.navigate([('/passwords')]);
       }
 }

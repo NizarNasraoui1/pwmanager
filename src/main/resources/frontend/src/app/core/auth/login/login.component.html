@@ -11,16 +11,15 @@
               <header class="header">Log in</header>
               <header class="subHeader">Welcome to <b>Password Manager</b> Please Enter your Details</header>
 
-              <form>
                   <div class="inputContainer">
                       <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png" class="labelIcon"><span>Email
                               Address*</span></label>
-                      <input type="email" class="input" id="emailAddress" placeholder="Enter your Email Address">
+                      <input [(ngModel)]="username" type="email" class="input" id="emailAddress" placeholder="Enter your Email Address">
                   </div>
                   <div class="inputContainer">
                       <label class="label" for="emailAddress"><img src="https://i.imgur.com/g5SvdfG.png"
                               class="labelIcon"><span>Password*</span></label>
-                      <input type="password" class="input" id="emailAddress" placeholder="Enter your Password">
+                      <input [(ngModel)]="password" type="password" class="input" id="emailAddress" placeholder="Enter your Password">
                   </div>
                   <div class="OptionsContainer">
                       <div class="checkboxContainer">
@@ -29,8 +28,7 @@
                       </div>
                       <a href="#" class="ForgotPasswordLink">Forgot Password?</a>
                   </div>
-                  <button class="LoginButton">Login</button>
-              </form>
+                  <button (click)="onSubmit()" class="LoginButton">Login</button>
           </div>
       </div>
   </div>
