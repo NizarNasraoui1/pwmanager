@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddPasswordPopupComponent } from '../add-password-popup/add-password-popup.component';
 import { ModifyPasswordComponent } from '../modify-password/modify-password.component';
+import { PasswordService } from '../../services/password.service';
+import { AuthService } from 'src/app/core/_services/auth.service';
+import { Router } from '@angular/router';
 
 
 export interface PasswordDto {
@@ -26,12 +29,15 @@ const ELEMENT_DATA: PasswordDto[] = [
 
 
 
-export class ViewPasswordsComponent {
+export class ViewPasswordsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'password','up','down','modify'];
   dataSource = ELEMENT_DATA;
 
-  constructor(public dialog: MatDialog){
+  constructor(public dialog: MatDialog,public passwordService:PasswordService,private authService:AuthService,private router:Router){
 
+  }
+  ngOnInit(): void {
+    this.getAllPasswords();
   }
 
   onUp(id:number){
@@ -93,5 +99,15 @@ export class ViewPasswordsComponent {
   }
 
 
+  getAllPasswords(){
+    this.passwordService.getAllPasswords().subscribe((res)=>{
+      console.log(res)
+    })
+  }
+
+  logOut(){
+    this.authService.logOut();
+    this.router.navigate(["/auth/login"]);
+  }
 
 }

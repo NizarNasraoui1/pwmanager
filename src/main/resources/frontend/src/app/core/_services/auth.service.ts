@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { LoginForm } from 'src/app/shared/models/loginForm';
 import { TokenStorageService } from './token-storage.service';
 
-const AUTH_API = 'http://localhost:8080';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -28,18 +27,17 @@ export class AuthService {
     };
 
     return this.http
-        .post('api/login', body.toString(), options);
+        .post('/api/login', body.toString(), options);
   }
 
   logOut(){
     this.tokenStorageService.signOut();
   }
 
-  register(user:any): Observable<any> {
-    return this.http.post(AUTH_API + 'signup', {
-      username: user.username,
-      email: user.email,
-      password: user.password
+  register(username:string,password:string): Observable<any> {
+    return this.http.post('api/user/save', {
+      username: username,
+      password: password
     }, httpOptions);
   }
 

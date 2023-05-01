@@ -15,14 +15,14 @@
                   <div class="inputContainer">
                       <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png" class="labelIcon"><span>Email
                               Address*</span></label>
-                      <input type="email" class="input" id="emailAddress" placeholder="Enter your Email Address">
+                      <input [(ngModel)]="username" type="email" class="input" id="emailAddress" placeholder="Enter your Email Address">
                   </div>
                   <div class="inputContainer">
                       <label class="label" for="emailAddress"><img src="https://i.imgur.com/g5SvdfG.png"
                               class="labelIcon"><span>Password*</span></label>
                       <input type="password" class="input" id="emailAddress" placeholder="Enter your Password">
                   </div>
-                  <button class="LoginButton">Register</button>
+                  <button (click)="register()" class="LoginButton">Register</button>
               </form>
           </div>
       </div>

@@ -27,3 +27,190 @@
 2023-05-01 13:13:22.428  INFO 13956 --- [http-nio-8080-exec-1] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
 2023-05-01 13:13:28.388  INFO 13956 --- [http-nio-8080-exec-2] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
 2023-05-01 13:14:01.745  INFO 13956 --- [http-nio-8080-exec-3] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 17:06:27.883  INFO 13956 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 17:06:27.899  INFO 13956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 17:06:27.911  INFO 13956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 21:20:44.142  INFO 9676 --- [main] com.crm.Crm.CrmApplication               : Starting CrmApplication using Java 17.0.4.1 on DESKTOP-K9VT9F2 with PID 9676 (C:\Users\NIZAR\IdeaProjects\pwmanager\target\classes started by NIZAR in C:\Users\NIZAR\IdeaProjects\pwmanager)
+2023-05-01 21:20:44.144  INFO 9676 --- [main] com.crm.Crm.CrmApplication               : The following 1 profile is active: "dev"
+2023-05-01 21:20:45.286  INFO 9676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 21:20:45.360  INFO 9676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 4 JPA repository interfaces.
+2023-05-01 21:20:46.199  INFO 9676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 21:20:46.211  INFO 9676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 21:20:46.211  INFO 9676 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-05-01 21:20:46.335  INFO 9676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 21:20:46.335  INFO 9676 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2142 ms
+2023-05-01 21:20:46.919  INFO 9676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 21:20:46.999  INFO 9676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2023-05-01 21:20:47.235  INFO 9676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 21:20:47.356  INFO 9676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 21:20:47.356  WARN 9676 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-05-01 21:20:47.808  INFO 9676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 21:20:47.825  INFO 9676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-01 21:20:48.727  INFO 9676 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 21:20:48.736  INFO 9676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:20:49.665  WARN 9676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 21:20:50.398  INFO 9676 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e7dd504, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d466ef9, org.springframework.security.web.header.HeaderWriterFilter@123d666b, org.springframework.security.web.authentication.logout.LogoutFilter@7842260f, com.crm.Crm.config.CustomAuthorizationFilter@3e5febe9, com.crm.Crm.config.CustomAuthenticationFilter@5643052d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1acd2a14, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@195d4780, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e0b7f58, org.springframework.security.web.session.SessionManagementFilter@2d5b549b, org.springframework.security.web.access.ExceptionTranslationFilter@10b0dd3a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5101b9]
+2023-05-01 21:20:52.610  INFO 9676 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-01 21:20:52.686  INFO 9676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 21:20:52.796  INFO 9676 --- [main] com.crm.Crm.CrmApplication               : Started CrmApplication in 9.11 seconds (JVM running for 9.713)
+2023-05-01 21:26:38.734  INFO 9676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 21:26:38.735  INFO 9676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 21:26:38.738  INFO 9676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-05-01 21:26:58.340 ERROR 9676 --- [http-nio-8080-exec-3] c.crm.Crm.service.impl.UserServiceImpl   : User not found in the database
+2023-05-01 21:30:23.864  INFO 9676 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:30:23.866  INFO 9676 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 21:30:23.875  INFO 9676 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 21:30:28.816  INFO 6492 --- [main] com.crm.Crm.CrmApplication               : Starting CrmApplication using Java 17.0.4.1 on DESKTOP-K9VT9F2 with PID 6492 (C:\Users\NIZAR\IdeaProjects\pwmanager\target\classes started by NIZAR in C:\Users\NIZAR\IdeaProjects\pwmanager)
+2023-05-01 21:30:28.818  INFO 6492 --- [main] com.crm.Crm.CrmApplication               : The following 1 profile is active: "dev"
+2023-05-01 21:30:29.773  INFO 6492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 21:30:29.834  INFO 6492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2023-05-01 21:30:30.598  INFO 6492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 21:30:30.606  INFO 6492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 21:30:30.606  INFO 6492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-05-01 21:30:30.714  INFO 6492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 21:30:30.714  INFO 6492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1839 ms
+2023-05-01 21:30:31.227  INFO 6492 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 21:30:31.289  INFO 6492 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2023-05-01 21:30:31.443  INFO 6492 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 21:30:31.538  INFO 6492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 21:30:31.544  WARN 6492 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-05-01 21:30:31.853  INFO 6492 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 21:30:31.875  INFO 6492 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-01 21:30:32.542  INFO 6492 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 21:30:32.550  INFO 6492 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:30:33.074  WARN 6492 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 21:30:33.514  INFO 6492 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@117be84a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ee5fe1e, org.springframework.security.web.header.HeaderWriterFilter@539f2fec, org.springframework.security.web.authentication.logout.LogoutFilter@69d9d322, com.crm.Crm.config.CustomAuthorizationFilter@140fa482, com.crm.Crm.config.CustomAuthenticationFilter@78de0f6f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@195d4780, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ac76ad9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@588614f9, org.springframework.security.web.session.SessionManagementFilter@4a561f7d, org.springframework.security.web.access.ExceptionTranslationFilter@393d4e34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40304938]
+2023-05-01 21:30:35.625  INFO 6492 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-01 21:30:35.692  INFO 6492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 21:30:35.783  INFO 6492 --- [main] com.crm.Crm.CrmApplication               : Started CrmApplication in 7.371 seconds (JVM running for 7.793)
+2023-05-01 21:30:45.229  INFO 6492 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:30:45.230  INFO 6492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 21:30:45.237  INFO 6492 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 21:30:48.719  INFO 14092 --- [main] com.crm.Crm.CrmApplication               : Starting CrmApplication using Java 17.0.4.1 on DESKTOP-K9VT9F2 with PID 14092 (C:\Users\NIZAR\IdeaProjects\pwmanager\target\classes started by NIZAR in C:\Users\NIZAR\IdeaProjects\pwmanager)
+2023-05-01 21:30:48.723  INFO 14092 --- [main] com.crm.Crm.CrmApplication               : The following 1 profile is active: "dev"
+2023-05-01 21:30:49.767  INFO 14092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 21:30:49.860  INFO 14092 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2023-05-01 21:30:50.655  INFO 14092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 21:30:50.664  INFO 14092 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 21:30:50.665  INFO 14092 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-05-01 21:30:50.771  INFO 14092 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 21:30:50.771  INFO 14092 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1978 ms
+2023-05-01 21:30:51.295  INFO 14092 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 21:30:51.351  INFO 14092 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2023-05-01 21:30:51.524  INFO 14092 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 21:30:51.614  INFO 14092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 21:30:51.618  WARN 14092 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-05-01 21:30:51.893  INFO 14092 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 21:30:51.916  INFO 14092 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-01 21:30:52.639  INFO 14092 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 21:30:52.649  INFO 14092 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:30:53.251  WARN 14092 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 21:30:53.739  INFO 14092 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fdff4f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@5432be12, org.springframework.security.web.header.HeaderWriterFilter@542c6165, org.springframework.security.web.authentication.logout.LogoutFilter@3390621a, com.crm.Crm.config.CustomAuthorizationFilter@117be84a, com.crm.Crm.config.CustomAuthenticationFilter@140fa482, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58dea0a7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6821d4e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78de0f6f, org.springframework.security.web.session.SessionManagementFilter@7d466ef9, org.springframework.security.web.access.ExceptionTranslationFilter@6d3194ff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c651286]
+2023-05-01 21:30:55.232  INFO 14092 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-01 21:30:55.291  INFO 14092 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 21:30:55.384  INFO 14092 --- [main] com.crm.Crm.CrmApplication               : Started CrmApplication in 7.114 seconds (JVM running for 7.615)
+2023-05-01 21:30:57.264  INFO 14092 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 21:30:57.265  INFO 14092 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 21:30:57.268  INFO 14092 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-05-01 21:31:02.964  INFO 14092 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:31:02.966  INFO 14092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 21:31:02.974  INFO 14092 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 21:31:13.512  INFO 15456 --- [main] com.crm.Crm.CrmApplication               : Starting CrmApplication using Java 17.0.4.1 on DESKTOP-K9VT9F2 with PID 15456 (C:\Users\NIZAR\IdeaProjects\pwmanager\target\classes started by NIZAR in C:\Users\NIZAR\IdeaProjects\pwmanager)
+2023-05-01 21:31:13.514  INFO 15456 --- [main] com.crm.Crm.CrmApplication               : The following 1 profile is active: "dev"
+2023-05-01 21:31:14.579  INFO 15456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 21:31:14.663  INFO 15456 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 4 JPA repository interfaces.
+2023-05-01 21:31:15.550  INFO 15456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 21:31:15.560  INFO 15456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 21:31:15.560  INFO 15456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-05-01 21:31:15.677  INFO 15456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 21:31:15.678  INFO 15456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2114 ms
+2023-05-01 21:31:16.284  INFO 15456 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 21:31:16.365  INFO 15456 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2023-05-01 21:31:16.541  INFO 15456 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 21:31:16.642  INFO 15456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 21:31:16.647  WARN 15456 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-05-01 21:31:16.976  INFO 15456 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 21:31:17.008  INFO 15456 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-01 21:31:17.800  INFO 15456 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 21:31:17.809  INFO 15456 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:31:18.577  WARN 15456 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 21:31:19.273  INFO 15456 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@597eb9ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@3bf306d3, org.springframework.security.web.header.HeaderWriterFilter@32f2de5c, org.springframework.security.web.authentication.logout.LogoutFilter@5fdff4f1, com.crm.Crm.config.CustomAuthorizationFilter@65c66fc4, com.crm.Crm.config.CustomAuthenticationFilter@7a90f33d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ec25b61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d160161, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c7b27c, org.springframework.security.web.session.SessionManagementFilter@3031d9e9, org.springframework.security.web.access.ExceptionTranslationFilter@4df8443f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40612056]
+2023-05-01 21:31:21.041  INFO 15456 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-01 21:31:21.123  INFO 15456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 21:31:21.214  INFO 15456 --- [main] com.crm.Crm.CrmApplication               : Started CrmApplication in 8.084 seconds (JVM running for 8.912)
+2023-05-01 21:31:22.880  INFO 15456 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 21:31:22.880  INFO 15456 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 21:31:22.882  INFO 15456 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-05-01 21:31:47.400 ERROR 15456 --- [http-nio-8080-exec-3] c.crm.Crm.service.impl.UserServiceImpl   : User not found in the database
+2023-05-01 21:31:57.931  INFO 15456 --- [http-nio-8080-exec-7] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 21:32:37.214  INFO 15456 --- [http-nio-8080-exec-5] c.crm.Crm.service.impl.UserServiceImpl   : Fetching all users
+2023-05-01 21:32:53.075  INFO 15456 --- [http-nio-8080-exec-6] c.crm.Crm.service.impl.UserServiceImpl   : Saving new user ali to the database
+2023-05-01 21:35:02.210  INFO 15456 --- [http-nio-8080-exec-3] c.crm.Crm.service.impl.UserServiceImpl   : Saving new user null to the database
+2023-05-01 21:40:35.984  INFO 15456 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:40:35.986  INFO 15456 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 21:40:35.994  INFO 15456 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 21:40:40.063  INFO 19152 --- [main] com.crm.Crm.CrmApplication               : Starting CrmApplication using Java 17.0.4.1 on DESKTOP-K9VT9F2 with PID 19152 (C:\Users\NIZAR\IdeaProjects\pwmanager\target\classes started by NIZAR in C:\Users\NIZAR\IdeaProjects\pwmanager)
+2023-05-01 21:40:40.065  INFO 19152 --- [main] com.crm.Crm.CrmApplication               : The following 1 profile is active: "dev"
+2023-05-01 21:40:41.003  INFO 19152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 21:40:41.076  INFO 19152 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2023-05-01 21:40:41.798  INFO 19152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 21:40:41.808  INFO 19152 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 21:40:41.808  INFO 19152 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-05-01 21:40:41.911  INFO 19152 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 21:40:41.912  INFO 19152 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1787 ms
+2023-05-01 21:40:42.390  INFO 19152 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 21:40:42.452  INFO 19152 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2023-05-01 21:40:42.619  INFO 19152 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 21:40:42.707  INFO 19152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 21:40:42.711  WARN 19152 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-05-01 21:40:42.980  INFO 19152 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 21:40:43.004  INFO 19152 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-01 21:40:43.647  INFO 19152 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 21:40:43.653  INFO 19152 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:40:44.209  WARN 19152 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 21:40:44.650  INFO 19152 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21f421b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e44f989, org.springframework.security.web.header.HeaderWriterFilter@4c231f62, org.springframework.security.web.authentication.logout.LogoutFilter@1b2e841, com.crm.Crm.config.CustomAuthorizationFilter@4e3bc13b, com.crm.Crm.config.CustomAuthenticationFilter@2c989d82, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@539f2fec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1acd2a14, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e04c89d, org.springframework.security.web.session.SessionManagementFilter@6d3194ff, org.springframework.security.web.access.ExceptionTranslationFilter@5cb4ba80, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1415f18d]
+2023-05-01 21:40:46.173  INFO 19152 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-01 21:40:46.236  INFO 19152 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 21:40:46.319  INFO 19152 --- [main] com.crm.Crm.CrmApplication               : Started CrmApplication in 6.647 seconds (JVM running for 7.082)
+2023-05-01 21:40:53.489  INFO 19152 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 21:40:53.490  INFO 19152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 21:40:53.492  INFO 19152 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-05-01 21:43:27.792  INFO 19152 --- [http-nio-8080-exec-5] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 21:43:53.195  INFO 19152 --- [http-nio-8080-exec-7] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 21:50:51.054  INFO 19152 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:50:51.057  INFO 19152 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-01 21:50:51.064  INFO 19152 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-01 21:50:55.444  INFO 14584 --- [main] com.crm.Crm.CrmApplication               : Starting CrmApplication using Java 17.0.4.1 on DESKTOP-K9VT9F2 with PID 14584 (C:\Users\NIZAR\IdeaProjects\pwmanager\target\classes started by NIZAR in C:\Users\NIZAR\IdeaProjects\pwmanager)
+2023-05-01 21:50:55.446  INFO 14584 --- [main] com.crm.Crm.CrmApplication               : The following 1 profile is active: "dev"
+2023-05-01 21:50:56.448  INFO 14584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-01 21:50:56.516  INFO 14584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2023-05-01 21:50:57.276  INFO 14584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-01 21:50:57.287  INFO 14584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-01 21:50:57.287  INFO 14584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.62]
+2023-05-01 21:50:57.397  INFO 14584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-01 21:50:57.397  INFO 14584 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1895 ms
+2023-05-01 21:50:57.861  INFO 14584 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-01 21:50:57.902  INFO 14584 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2023-05-01 21:50:58.072  INFO 14584 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-05-01 21:50:58.160  INFO 14584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-01 21:50:58.164  WARN 14584 --- [main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2023-05-01 21:50:58.448  INFO 14584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-01 21:50:58.476  INFO 14584 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-05-01 21:50:59.081  INFO 14584 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-01 21:50:59.089  INFO 14584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-01 21:50:59.630  WARN 14584 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-01 21:51:00.124  INFO 14584 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f4b7a2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d3194ff, org.springframework.security.web.header.HeaderWriterFilter@507187c1, org.springframework.security.web.authentication.logout.LogoutFilter@f3c27e9, com.crm.Crm.config.CustomAuthorizationFilter@334ac669, com.crm.Crm.config.CustomAuthenticationFilter@77430c79, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f3310fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a4e1ca7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@506654fa, org.springframework.security.web.session.SessionManagementFilter@10b0dd3a, org.springframework.security.web.access.ExceptionTranslationFilter@397f9672, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61e4a072]
+2023-05-01 21:51:01.680  INFO 14584 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-05-01 21:51:01.740  INFO 14584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-01 21:51:01.827  INFO 14584 --- [main] com.crm.Crm.CrmApplication               : Started CrmApplication in 6.835 seconds (JVM running for 7.222)
+2023-05-01 21:51:06.735  INFO 14584 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-01 21:51:06.736  INFO 14584 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-01 21:51:06.739  INFO 14584 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-05-01 21:57:28.292  INFO 14584 --- [http-nio-8080-exec-7] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:00:46.939  INFO 14584 --- [http-nio-8080-exec-2] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:03:19.147  INFO 14584 --- [http-nio-8080-exec-7] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:07:11.899  INFO 14584 --- [http-nio-8080-exec-7] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:09:14.027  INFO 14584 --- [http-nio-8080-exec-1] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:11:27.530  INFO 14584 --- [http-nio-8080-exec-5] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:11:52.731  INFO 14584 --- [http-nio-8080-exec-9] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
+2023-05-01 22:16:19.992  INFO 14584 --- [http-nio-8080-exec-3] c.crm.Crm.service.impl.UserServiceImpl   : User found in the database: admin
