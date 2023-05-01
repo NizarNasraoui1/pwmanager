@@ -11,8 +11,10 @@ export interface PasswordDto {
 }
 
 const ELEMENT_DATA: PasswordDto[] = [
-  {id: 1, name: 'name2', password: "123", rank: 2},
-  {id: 2, name: 'name1', password: "123", rank: 1},
+  {id: 1, name: 'name1', password: "123", rank: 1},
+  {id: 2, name: 'name2', password: "123", rank: 2},
+  {id: 3, name: 'name3', password: "123", rank: 3},
+  {id: 4, name: 'name4', password: "123", rank: 4}
 
 ];
 @Component({
@@ -32,11 +34,37 @@ export class ViewPasswordsComponent {
   }
 
   onUp(id:number){
-    console.log(id)
+    let rank=this.getRank(id);
+    console.log(rank)
+    if(rank>1){
+      var rowToUp=this.dataSource.find((e)=>e.rank==rank);
+      var rowToDown=this.dataSource.find((e)=>e.rank==rank-1);
+      rowToUp!.rank=rank-1;
+      rowToDown!.rank=rank;
+      this.dataSource=[...this.sortArrrayByRank(this.dataSource)];
+    }
+
+
   }
 
   onDown(id:number){
-    console.log(id)
+    let rank=this.dataSource.find((e)=>e.id==id)!.rank;
+    if(rank<this.dataSource.length){
+      var rowToUp=this.dataSource.find((e)=>e.rank==rank+1);
+      var rowToDown=this.dataSource.find((e)=>e.rank==rank);
+      rowToUp!.rank=rank;
+      rowToDown!.rank=rank+1;
+      this.dataSource=[...this.sortArrrayByRank(this.dataSource)];
+    }
+  }
+
+  getRank(id:number):number{
+    return this.dataSource.find((e)=>e.id==id)!.rank;
+  }
+
+
+  sortArrrayByRank(array:any[]){
+    return array.sort((e1,e2)=>e1.rank-e2.rank);
   }
 
   modifyPassword(id:number){
@@ -51,4 +79,8 @@ export class ViewPasswordsComponent {
       exitAnimationDuration,
     });
   }
+
+
+
+
 }
