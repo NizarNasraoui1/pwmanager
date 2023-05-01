@@ -6,18 +6,26 @@ import { ViewPasswordsComponent } from './components/view-passwords/view-passwor
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { AddPasswordPopupComponent } from './components/add-password-popup/add-password-popup.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
   declarations: [
-    ViewPasswordsComponent
+    ViewPasswordsComponent,
+    AddPasswordPopupComponent
   ],
   imports: [
     CommonModule,
     PasswordManagerRoutingModule,
     MatTableModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule
+
+
 
   ]
 })

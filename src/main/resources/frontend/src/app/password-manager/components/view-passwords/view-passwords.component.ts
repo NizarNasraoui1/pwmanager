@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddPasswordPopupComponent } from '../add-password-popup/add-password-popup.component';
 
 
 export interface PasswordDto {
@@ -25,6 +27,9 @@ export class ViewPasswordsComponent {
   displayedColumns: string[] = ['name', 'password','up','down','modify'];
   dataSource = ELEMENT_DATA;
 
+  constructor(public dialog: MatDialog){
+
+  }
 
   onUp(id:number){
     console.log(id)
@@ -36,5 +41,14 @@ export class ViewPasswordsComponent {
 
   modifyPassword(id:number){
     console.log(id)
+  }
+
+  openAddPasswordPopup(enterAnimationDuration: string, exitAnimationDuration: string){
+    this.dialog.open(AddPasswordPopupComponent, {
+      width: '40%',
+      height:'40%',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
   }
 }
