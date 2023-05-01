@@ -15,12 +15,12 @@
                   <div class="inputContainer">
                       <label class="label" for="emailAddress"><img src="https://i.imgur.com/Hn13wvm.png" class="labelIcon"><span>Email
                               Address*</span></label>
-                      <input [(ngModel)]="username" type="email" class="input" id="emailAddress" placeholder="Enter your Email Address">
+                      <input name="username" [(ngModel)]="username" type="email" class="input" id="username" placeholder="Enter your Email Address">
                   </div>
                   <div class="inputContainer">
                       <label class="label" for="emailAddress"><img src="https://i.imgur.com/g5SvdfG.png"
                               class="labelIcon"><span>Password*</span></label>
-                      <input type="password" class="input" id="emailAddress" placeholder="Enter your Password">
+                      <input name="password" [(ngModel)]="password" type="email" type="password" class="input" id="emailAddress" placeholder="Enter your Password">
                   </div>
                   <button (click)="register()" class="LoginButton">Register</button>
               </form>
