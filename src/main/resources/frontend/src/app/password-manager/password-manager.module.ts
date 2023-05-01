@@ -9,12 +9,14 @@ import {MatButtonModule} from '@angular/material/button';
 import { AddPasswordPopupComponent } from './components/add-password-popup/add-password-popup.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
+import { ModifyPasswordComponent } from './components/modify-password/modify-password.component';
 
 
 @NgModule({
   declarations: [
     ViewPasswordsComponent,
-    AddPasswordPopupComponent
+    AddPasswordPopupComponent,
+    ModifyPasswordComponent
   ],
   imports: [
     CommonModule,

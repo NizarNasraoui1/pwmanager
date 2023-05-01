@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddPasswordPopupComponent } from '../add-password-popup/add-password-popup.component';
+import { ModifyPasswordComponent } from '../modify-password/modify-password.component';
 
 
 export interface PasswordDto {
@@ -35,7 +36,6 @@ export class ViewPasswordsComponent {
 
   onUp(id:number){
     let rank=this.getRank(id);
-    console.log(rank)
     if(rank>1){
       var rowToUp=this.dataSource.find((e)=>e.rank==rank);
       var rowToDown=this.dataSource.find((e)=>e.rank==rank-1);
@@ -68,18 +68,29 @@ export class ViewPasswordsComponent {
   }
 
   modifyPassword(id:number){
-    console.log(id)
+    let name=this.dataSource.find(e=>e.id==id)?.name;
+    let password=this.dataSource.find(e=>e.id==id)?.password;
+    this.openModifyPasswordPopup(id,name,password);
   }
 
-  openAddPasswordPopup(enterAnimationDuration: string, exitAnimationDuration: string){
+  openAddPasswordPopup(){
     this.dialog.open(AddPasswordPopupComponent, {
-      width: '40%',
-      height:'40%',
-      enterAnimationDuration,
-      exitAnimationDuration,
+      width: '60vh',
+      height:'70vw',
     });
   }
 
+  openModifyPasswordPopup(id:number,name:string | undefined,password:string | undefined){
+    this.dialog.open(ModifyPasswordComponent, {
+      width: '60vh',
+      height:'70vw',
+      data: {
+        id: id,
+        name: name,
+        password:password
+      }
+    });
+  }
 
 
 
