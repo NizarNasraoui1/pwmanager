@@ -13,14 +13,6 @@ export interface PasswordDto {
   password: string;
   rank: number;
 }
-
-const ELEMENT_DATA: PasswordDto[] = [
-  {id: 1, name: 'name1', password: "123", rank: 1},
-  {id: 2, name: 'name2', password: "123", rank: 2},
-  {id: 3, name: 'name3', password: "123", rank: 3},
-  {id: 4, name: 'name4', password: "123", rank: 4}
-
-];
 @Component({
   selector: 'app-view-passwords',
   templateUrl: './view-passwords.component.html',
@@ -31,7 +23,7 @@ const ELEMENT_DATA: PasswordDto[] = [
 
 export class ViewPasswordsComponent implements OnInit {
   displayedColumns: string[] = ['name', 'password','up','down','modify'];
-  dataSource = ELEMENT_DATA;
+  dataSource:PasswordDto[]=[];
 
   constructor(public dialog: MatDialog,public passwordService:PasswordService,private authService:AuthService,private router:Router){
 
@@ -101,6 +93,7 @@ export class ViewPasswordsComponent implements OnInit {
 
   getAllPasswords(){
     this.passwordService.getAllPasswords().subscribe((res)=>{
+      this.dataSource=res;
       console.log(res)
     })
   }

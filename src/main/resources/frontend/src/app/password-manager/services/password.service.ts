@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PasswordDto } from '../components/view-passwords/view-passwords.component';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 const passwordApiUrl="/api/password";
 

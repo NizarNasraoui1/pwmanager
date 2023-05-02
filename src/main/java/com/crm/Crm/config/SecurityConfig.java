@@ -16,11 +16,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import static org.springframework.http.HttpMethod.*;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
-/**
- * @author Get Arrays (https://www.getarrays.io/)
- * @version 1.0
- * @since 7/10/2021
- */
 @Configuration @EnableWebSecurity @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserDetailsService userDetailsService;
@@ -37,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
         customAuthenticationFilter.setFilterProcessesUrl("/api/login");
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("/api/login/**","/api/user/save", "/api/token/refresh/**","/swagger-ui/**","/swagger-ui.html/**","/api-docs/**","/actuator/**").permitAll();
+        http.authorizeRequests().antMatchers("api/**","/api/login/**","/api/user/save", "/api/token/refresh/**","/swagger-ui/**","/swagger-ui.html/**","/api-docs/**","/actuator/**").permitAll();
 //        http.authorizeRequests().antMatchers(GET, "/api/user/**").hasAnyAuthority("ROLE_USER");
 //        http.authorizeRequests().antMatchers(POST, "/api/user/save/**").hasAnyAuthority("ROLE_ADMIN");
 //        http.authorizeRequests().antMatchers(GET, "/api/**").hasAnyAuthority("ADMIN");
