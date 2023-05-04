@@ -31,12 +31,12 @@ public class PasswordResource {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<PasswordDto>updatePassword(@PathVariable("id")Long id,@RequestBody PasswordDto passwordDto){
+    public ResponseEntity<PasswordDto>updatePassword(@PathVariable("id")Long id,@RequestBody PasswordDto passwordDto) throws UnsupportedEncodingException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
         return new ResponseEntity<>(passwordService.updatePassword(id,passwordDto),HttpStatus.OK);
     }
 
     @PutMapping("/ranks")
-    public ResponseEntity<List<PasswordDto>>updateAllPasswords(@RequestBody List<PasswordDto> passwordDto){
+    public ResponseEntity<List<PasswordDto>>updatePasswordsRank(@RequestBody List<PasswordDto> passwordDto){
         return new ResponseEntity<>(passwordService.updateRanks(passwordDto),HttpStatus.OK);
     }
 

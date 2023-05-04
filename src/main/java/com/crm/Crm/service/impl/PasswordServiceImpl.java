@@ -46,7 +46,9 @@ public class PasswordServiceImpl implements PasswordService {
         else{
             password.setRank(1);
         }
-        return passwordMapper.toDto(passwordRepository.save(password));
+        Password newPassword= passwordRepository.save(password);
+        newPassword.setPassword(passwordDto.getPassword());
+        return passwordMapper.toDto(password);
     }
 
     @Override
@@ -76,11 +78,15 @@ public class PasswordServiceImpl implements PasswordService {
     }
 
     @Override
-    public PasswordDto updatePassword(Long id,PasswordDto passwordDto) {
+    public PasswordDto updatePassword(Long id,PasswordDto passwordDto) throws UnsupportedEncodingException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
         Password password=passwordRepository.findById(id).orElseThrow(()->new EntityNotFoundException("password not found"));
         password.setPassword(passwordDto.getPassword());
         password.setName(passwordDto.getName());
-        return null;
+        password.setPassword(encryptionUtil.encrypt(passwordDto.getPassword()));
+        Password updatedPassword= passwordRepository.save(password);
+        PasswordDto updatedPasswordDto= passwordMapper.toDto(updatedPassword);
+        updatedPasswordDto.setPassword(passwordDto.getPassword());
+        return updatedPasswordDto;
     }
 
     @Override

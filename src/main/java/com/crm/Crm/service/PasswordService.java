@@ -15,7 +15,7 @@ public interface PasswordService {
     void deletePassword(Long id);
     void changePasswordOrder(PasswordDto passwordDto);
     List<PasswordDto> getAllPasswords();
-    PasswordDto updatePassword(Long id,PasswordDto passwordDto);
+    PasswordDto updatePassword(Long id,PasswordDto passwordDto) throws UnsupportedEncodingException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException;
     List<PasswordDto> updateRanks(List<PasswordDto>passwordDtos);
 
 }

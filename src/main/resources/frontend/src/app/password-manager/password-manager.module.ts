@@ -10,6 +10,7 @@ import { AddPasswordPopupComponent } from './components/add-password-popup/add-p
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatInputModule} from '@angular/material/input';
 import { ModifyPasswordComponent } from './components/modify-password/modify-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { ModifyPasswordComponent } from './components/modify-password/modify-pas
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
 
 
 
