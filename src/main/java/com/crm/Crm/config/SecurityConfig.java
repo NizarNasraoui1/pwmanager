@@ -31,15 +31,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         CustomAuthenticationFilter customAuthenticationFilter = new CustomAuthenticationFilter(authenticationManagerBean());
         customAuthenticationFilter.setFilterProcessesUrl("/api/login");
+
         http.csrf().disable();
-        http.authorizeRequests().antMatchers("api/**","/api/login/**","/api/user/save", "/api/token/refresh/**","/swagger-ui/**","/swagger-ui.html/**","/api-docs/**","/actuator/**").permitAll();
-//        http.authorizeRequests().antMatchers(GET, "/api/user/**").hasAnyAuthority("ROLE_USER");
-//        http.authorizeRequests().antMatchers(POST, "/api/user/save/**").hasAnyAuthority("ROLE_ADMIN");
-//        http.authorizeRequests().antMatchers(GET, "/api/**").hasAnyAuthority("ADMIN");
-//        http.authorizeRequests().antMatchers(POST, "/api/**").hasAnyAuthority("ADMIN");
-//        http.authorizeRequests().antMatchers(PUT, "/api/**").hasAnyAuthority("ADMIN");
-//        http.authorizeRequests().antMatchers(DELETE, "/api/**").hasAnyAuthority("ADMIN");
-        http.authorizeRequests().anyRequest().authenticated();
+        http.authorizeRequests()
+                .antMatchers("**","/api/**","/api/login/**","/api/user/save", "/api/token/refresh/**","/swagger-ui/**","/swagger-ui.html/**","/api-docs/**","/actuator/**")
+                .permitAll()
+                .anyRequest()
+                .authenticated();
+
         http.addFilter(customAuthenticationFilter);
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
     }

@@ -52,8 +52,12 @@ public class PasswordServiceImpl implements PasswordService {
     }
 
     @Override
+    @Transactional
     public void deletePassword(Long id) {
+        Password password=passwordRepository.findById(id).orElseThrow(()->new EntityNotFoundException("password not found"));
+        this.passwordRepository.decrementRanks(password.getRank());
         passwordRepository.deleteById(id);
+
     }
 
     @Override
@@ -96,6 +100,7 @@ public class PasswordServiceImpl implements PasswordService {
         for (Password password : passwords) {
             password.setRank(passwordRankMap.get(password.getId()));
         }
+        passwordRepository.saveAll(passwords);
         return passwordMapper.toDtos(sortPasswords(passwords));
     }
 

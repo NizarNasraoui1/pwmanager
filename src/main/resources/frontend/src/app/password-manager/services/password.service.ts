@@ -29,6 +29,10 @@ export class PasswordService {
     return this.http.put(`${passwordApiUrl}/ranks`,passwords);
   }
 
+  deletePassword(id:number):Observable<any>{
+    return this.http.delete(`${passwordApiUrl}/${id}`);
+  }
+
 
 
 

@@ -22,7 +22,7 @@ export interface PasswordDto {
 
 
 export class ViewPasswordsComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'password','up','down','modify'];
+  displayedColumns: string[] = ['name', 'password','up','down','modify','delete'];
   dataSource:PasswordDto[]=[];
 
   constructor(public dialog: MatDialog,public passwordService:PasswordService,private authService:AuthService,private router:Router){
@@ -72,14 +72,17 @@ export class ViewPasswordsComponent implements OnInit {
   }
 
   openAddPasswordPopup(){
-    this.dialog.open(AddPasswordPopupComponent, {
+    let dialogRef = this.dialog.open(AddPasswordPopupComponent, {
       width: '60vh',
       height:'70vw',
+    });
+    dialogRef.afterClosed().subscribe(()=>{
+      this.getAllPasswords();
     });
   }
 
   openModifyPasswordPopup(id:number,name:string | undefined,password:string | undefined){
-    this.dialog.open(ModifyPasswordComponent, {
+    let dialogRef = this.dialog.open(ModifyPasswordComponent, {
       width: '60vh',
       height:'70vw',
       data: {
@@ -88,19 +91,34 @@ export class ViewPasswordsComponent implements OnInit {
         password:password
       }
     });
+    dialogRef.afterClosed().subscribe(()=>{
+      this.getAllPasswords();
+    });
   }
 
 
   getAllPasswords(){
     this.passwordService.getAllPasswords().subscribe((res)=>{
       this.dataSource=res;
-      console.log(res)
+    })
+  }
+
+  deletePassword(id:number){
+    this.passwordService.deletePassword(id).subscribe({
+      next: (res)=> this.dataSource=this.dataSource.filter((e)=>e.id!=id),
+      error: ()=> console.log("cannot delete")
+    })
+  }
+
+  updateRanks(){
+    this.passwordService.updatePassswordsRank(this.dataSource).subscribe({
+      next: (res)=> console.log(res)
     })
   }
 
   logOut(){
     this.authService.logOut();
-    this.router.navigate(["/auth/login"]);
+    this.router.navigate(["/"]);
   }
 
 }

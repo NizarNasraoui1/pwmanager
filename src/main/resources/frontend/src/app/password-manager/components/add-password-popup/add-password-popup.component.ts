@@ -18,9 +18,11 @@ export class AddPasswordPopupComponent {
   }
 
   addPassword(){
-    this.passwordService.addPassword(this.addPasswordForm.value).subscribe((res)=>{
-      console.log("password updated");
-    })
+    if(this.addPasswordForm.valid){
+      this.passwordService.addPassword(this.addPasswordForm.value).subscribe((res)=>{
+        console.log("password updated");
+      })
+    }
   }
 
 }
